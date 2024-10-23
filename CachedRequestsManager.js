@@ -79,7 +79,7 @@ export default class CachedRequestsManager {
     static get(HttpContext) {
         let cachedData = CachedRequestsManager.find(HttpContext.req.url);
         if (cachedData) {
-            console.log(`[Serving response from cache for URL: ${HttpContext.req.url}]`);
+            console.log(`[get du URL: ${HttpContext.req.url}]`);
             HttpContext.response.JSON(cachedData.content, cachedData.ETag, true);
             return true;
         }
