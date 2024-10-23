@@ -57,6 +57,9 @@ export default class Response {
                 CachedRequestsManager.add(url, obj, ETag);
                 console.log(`[Cache added for API URL: ${url}]`);
             }
+            else{
+                CachedRequestsManager.get;
+            }
             return this.end(content);
         } else
             return this.end();
